@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: movie-booking-app
+    env: python
+    repo: https://github.com/sanjamjeet82-ctrl/bookhub.git
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn movie_booking.wsgi:application
+    autoDeploy: true

@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Django settings
 DEBUG = True
-ALLOWED_HOSTS = ['vercel.app']
+ALLOWED_HOSTS = ['your-app-name.onrender.com']
 
 
 

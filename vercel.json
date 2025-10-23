@@ -1,0 +1,13 @@
+{
+    "builds":[{
+        "src": "movie_booking/wsgi.py",
+        "use": "@versal/python",
+        "config": { "maxLambdaSize":"15mb","runtime":"python3.9"}
+    }],
+    "routes": [
+        {
+            "serc":"/(.*)",
+            "dest":"movie_booking/wsgi.py"
+        }
+    ]
+}

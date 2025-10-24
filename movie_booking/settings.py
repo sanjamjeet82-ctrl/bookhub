@@ -30,7 +30,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Django settings
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['movie_booking.onrender.com', 'www.example.com']
 
 
 

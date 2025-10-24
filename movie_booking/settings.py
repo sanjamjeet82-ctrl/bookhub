@@ -30,8 +30,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Django settings
 DEBUG = True
 
-ALLOWED_HOSTS = ['movie_booking.onrender.com', 'www.example.com']
-
+raw_hosts = os.getenv("ALLOWED_HOSTS", "")
+ALLOWED_HOSTS = raw_hosts.split(",") if raw_hosts else []
 
 
 # Application definition

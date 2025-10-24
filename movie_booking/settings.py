@@ -29,8 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Django settings
 DEBUG = True
-
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
+raw_hosts = os.getenv('ALLOWED_HOSTS', '')
+ALLOWED_HOSTS = tuple(raw_hosts.split(',')) 
 
 
 

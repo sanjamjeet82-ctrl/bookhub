@@ -29,12 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Django settings
 DEBUG = True
-ALLOWED_HOSTS = config(
-    "ALLOWED_HOSTS",
-    default="localhost,127.0.0.1",
-    cast=lambda v: [host.strip() for host in v.split(",")]
-)
 
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '').split(',')
 
 
 

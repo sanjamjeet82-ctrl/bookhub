@@ -5,21 +5,14 @@ from decouple import config, Csv
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+
+
 # SECURITY WARNING: don't run with debug turned on in production!
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-<<<<<<< HEAD
-
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
-=======
-
-DEBUG = True
-
-raw_hosts = os.getenv("ALLOWED_HOSTS", "")
-ALLOWED_HOSTS = raw_hosts.split(",") if raw_hosts else []
-
->>>>>>> 5a4d4ba62f4137229131009257a8df7217882f98
+# ✅ Correct ALLOWED_HOSTS handling
+ALLOWED_HOSTS = config('ALLOWED_HOSTS',  cast=Csv())
 
 # Application definition
 INSTALLED_APPS = [

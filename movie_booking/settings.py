@@ -9,17 +9,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
 
-<<<<<<< HEAD
+
 
 ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
-=======
+
 
 DEBUG = True
 
 raw_hosts = os.getenv("ALLOWED_HOSTS", "")
 ALLOWED_HOSTS = raw_hosts.split(",") if raw_hosts else []
 
->>>>>>> 5a4d4ba62f4137229131009257a8df7217882f98
+
 
 # Application definition
 INSTALLED_APPS = [

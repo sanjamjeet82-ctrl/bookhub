@@ -11,13 +11,9 @@ DEBUG = config('DEBUG', default=False, cast=bool)
 
 
 
-ALLOWED_HOSTS = config('ALLOWED_HOSTS', default='', cast=Csv())
+ALLOWED_HOSTS = config('ALLOWED_HOSTS',  cast=Csv())
 
 
-DEBUG = True
-
-raw_hosts = os.getenv("ALLOWED_HOSTS", "")
-ALLOWED_HOSTS = raw_hosts.split(",") if raw_hosts else []
 
 
 

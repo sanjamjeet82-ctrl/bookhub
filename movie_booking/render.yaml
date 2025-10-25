@@ -8,7 +8,7 @@ services:
       - key: DJANGO_SETTINGS_MODULE
         value: movie_booking.settings
       - key: ALLOWED_HOSTS
-        value: movie_booking.onrender.com
+        value: https://ookhub-movie-booking.onrender.com
       - key: SECRET_KEY
         value: your-secret-key  
       

@@ -1,12 +1,15 @@
 services:
   - type: web
-    name: django-app
+    name: movie_booking
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn movie_booking.wsgi:application
     envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: movie_booking.settings
       - key: ALLOWED_HOSTS
         value: movie_booking.onrender.com
-      - key: DATABASE_URL
-        value: postgresql://djangobookmyshow_user:YsQ14Joy940K5RzdocXHV4vlwnOASl4x@dpg-d3t2u8q4d50c73epg4e0-a.oregon-postgres.render.com/djangobookmyshow
-
+      - key: SECRET_KEY
+        value: your-secret-key  
+      
+  
